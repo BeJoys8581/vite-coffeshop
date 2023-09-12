@@ -46,54 +46,145 @@ const coffeeShops = ref([
   },
 ]);
 
+// const reservation = ref(null);
 
+//const Table = (shop) => {
+ // const name = prompt('ชื่อ:');
+ // const phone = prompt('เบอร์โทร:');
+ // const date = prompt('วันที่:');
+ // const time = prompt('เวลา:');
+ // const tableCount = prompt('จำนวนโต๊ะ:');
 
-const reservation = ref(null);
+  //reservation.value = {
+   // shopId : shop.id,
+   // name,
+   // phone,
+   // date,
+   // time,
+   // tableCount,
+ // };
+//};  
 
-const Table = (shop) => {
-  const name = prompt('ชื่อ:');
-  const phoneNumber = prompt('เบอร์โทร:');
-  const date = prompt('วันที่:');
-  const time = prompt('เวลา:');
-  const tableCount = prompt('จำนวนโต๊ะ:');
+//const getShopName = (shopId) => {
+ // const shop = coffeeShops.value.find(shop => shop.id === shopId);
+ // return shop ? shop.name : '';
+//};
 
-  reservation.value = {
-    name,
-    phoneNumber,
-    date,
-    time,
-    tableCount,
+const Details = ref({
+    name: "",
+    tel: "",
+    date: "",
+    time: "",
+    tables: ""
+  });
+
+  const bookingList = ref([
+  ]);
+
+  function booking(shop, Details) {
+
+  const bookingData = {
+    coffeeShopName: shop.name,
+    name: Details.name,
+    tel: Details.tel,
+    date: Details.date,
+    time: Details.time,
+    tables: Details.tables,
   };
-};  
+
+  bookingList.value.push(bookingData);
+
+  Details.name = '';
+  Details.tel = '';
+  Details.date = '';
+  Details.time = '';
+  Details.tables = '';
+
+  alert("ทำการจองโต๊ะสำเร็จแล้ว ! เช็คข้อมูลได้ข้างล่าง ");
+}
+
 </script>
 
+
 <template>
-  <h1>จองโต๊ะร้านกาแฟ(หรือป่าวน้า)</h1><br>
+  <h1 style="color: white;">จองโต๊ะร้านกาแฟ (หรือป่าวน้าา)</h1><br>
+  <div class="container-input" style="background-color: #242627;">
+    <h4 style="color: rgb(255, 255, 255); font-weight: bold;">- ใส่ข้อมูลก่อนจองโต๊ะ -</h4><br>
+    <div class="bom">
+          <div class="text-input">
+            ชื่อ  &nbsp; <input type="text" v-model="Details.name" required> 
+          </div>
+          <div class="text-input">
+            เบอร์โทร &nbsp; <input type="tel" v-model="Details.tel" required >  
+          </div>
+          <div class="text-input">  
+            วัน/เดือน/ปี &nbsp; <input type="date" v-model="Details.date" required>
+          </div>
+          <div class="text-input">
+            เวลา &nbsp; <input type="time" v-model="Details.time" required>
+          </div>
+          <div class="text-input">
+            โต๊ะ &nbsp; <input type="number" v-model="Details.tables" required > 
+          </div>
+    </div><br>
+    <h4 style="color: rgb(245, 0, 0); font-weight: bold;">* กรุณาเช็คข้อมูลให้ครบถ้วนก่อนจองโต๊ะ *</h4>
+  </div><br>
+
   <div class="row">
     <div class="col-md-4" v-for="shop in coffeeShops" :key="shop.id">
       <div class="card">
         <img :src="shop.imageSrc" class="card-img-top"><br>
         <div class="card-body">
-          <div class="card" >
-          <h3 class="card-title">ร้าน {{ shop.name }}</h3><br>
-          <h6 clss="card-title" style="font-size: small;">ที่อยู่ <br> {{ shop.address }}</h6><br>
-          <p class="card-text">รายละเอียดร้าน <br> {{ shop.description }}</p>
+          <div class="card">
+            <h3 class="card-title">ร้าน {{ shop.name }}</h3><br>
+            <h6 class="card-title" style="font-size: small;">ที่อยู่ <br> {{ shop.address }}</h6><br>
+            <p class="card-text">รายละเอียดร้าน <br> {{ shop.description }}</p>
+          </div>
         </div>
-        </div>
-              <button @click="Table(shop)">จองโต๊ะ !</button>
+        <button @click="booking(shop,Details)">จองโต๊ะ !</button>
       </div>
     </div>
   </div>
 
 
-    <div v-if="reservation">
-      <h2>รายละเอียดการจอง</h2>
-      <p>ชื่อ: {{ reservation.name }}</p>
-      <p>เบอร์โทร: {{ reservation.phoneNumber }}</p>
-      <p>วันที่: {{ reservation.date }}</p>
-      <p>เวลา: {{ reservation.time }}</p>
-      <p>จำนวนโต๊ะ: {{ reservation.tableCount }}</p>
-    </div>
+  <!-- <div v-if="reservation">
+  <h2>รายละเอียดการจอง</h2>
+  <div class="reservation-details">
+    <span>ชื่อร้าน: {{ getShopName(reservation.shopId) }}</span>
+    <span>ชื่อลูกค้า: {{ reservation.name }}</span>
+    <span>เบอร์โทร: {{ reservation.phone }}</span>
+    <span>วันที่: {{ reservation.date }}</span>
+    <span>เวลา: {{ reservation.time }}</span>
+    <span>จำนวนโต๊ะ: {{ reservation.tableCount }}</span>
+  </div>
+</div> -->
+
+<div class="reservation-details" v-if="bookingList.length > 0">
+  <table class="table table-dark table-striped">                                                             
+    <thead>
+      <tr>
+        <th scope="col">ชื่อร้าน</th>
+        <th scope="col">ชื่อผู้จอง</th>
+        <th scope="col">เบอร์โทร</th>
+        <th scope="col">วัน/เดือน/ปี</th>
+        <th scope="col">เวลา</th>
+        <th scope="col">จำนวนโต๊ะ</th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr v-for="(booking, index) in bookingList" :key="index">
+  <td>{{ booking.coffeeShopName }}</td>
+  <td>{{ booking.name }}</td>
+  <td>{{ booking.tel }}</td>
+  <td>{{ booking.date }}</td>
+  <td>{{ booking.time }}</td>
+  <td>{{ booking.tables }}</td>
+</tr>
+  </tbody>
+</table>
+</div>
+ <br>
+
 
 </template>
 

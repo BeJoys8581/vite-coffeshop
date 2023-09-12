@@ -157,3 +157,53 @@ img{
 .template{
   display: flex;
 }
+
+.reservation-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; /* Adjust as needed for spacing */
+}
+
+.reservation-details p {
+  margin: 0;
+}
+
+.card{
+  transition: 300ms;
+}
+.card:hover{
+  background-color: white;
+  transform: scale(1.05);
+}
+.color{
+  color: white;
+}
+
+.container-input{
+  border-radius: 65px;
+  padding: 20px;
+}
+
+.bom{
+  border-radius: 30px;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+  background-color: rgb(143, 143, 143);
+}
+
+h1{
+  border: 2px solid rgb(255, 255, 255); 
+  padding: 10px;
+  border-radius: 45px;
+  background-color: #242627;;
+  transition: 300ms;
+}
+
+h1:hover{
+  transform: scale(1.05);
+}
+
