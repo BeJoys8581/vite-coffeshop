@@ -21,14 +21,14 @@ const coffeeShops = ref([
     name: 'Coffee House',
     description:'Coffee House เป็น ร้านอาหารใหญ่ใจกลางเมืองอยุธยา ให้อาหารมื้อค่ำของคุณเป็นมื้อพิเศษกับบรรยากาศสุดชิล ฟังดนตรีสดเพราะๆ อาหารอร่อย ถ่ายรูปสวย ร้านกว้างโปร่งโล่งนั่งสบาย รับจัดเลี้ยงพิเศษต่างๆ บอกเลยว่ามาครบจบที่นี่!' ,
     address: 'ถนน นเรศวร เทศบาลนครพระนครศรีอยุธยา 13000 ' ,
-    imageSrc:"https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/244830243_196023469376022_1134264915972781726_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeFyrK_zPoknL70bX7QKnZz4hmcIs9J2OiqGZwiz0nY6KuT9CXokoQCg-HVL7wGIpiEkX_nEOYtBfVUMGK_XrTwu&_nc_ohc=zP-6xaoOboUAX96Ic80&_nc_ht=scontent.fcnx3-1.fna&oh=00_AfCn5o663kRjkjtB4zKCbZlm7HoS-OPQsjGaa6X1P2lTHQ&oe=650069DF" ,
+    imageSrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyArdw4jfTDwUARbf4rHi-b0aRLI7HyLBddAqZ4K_R9raVsFaJVAPUvRy82XQ_mj1rXuk&usqp=CAU",
   },
   {
     id: 4,
     name: 'ค.แข็ง',
     description:'มาซอยนี้ต้อง ค.แข็ง ซอยฝรั่ง ซอยธกส แฮงค์เอ้าท์ที่ใหม่อยุธยา' ,
     address: 'ซอย ถนน นเรศวร ตำบลหัวรอ อำเภอ พระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000 ประเทศไทย เทศบาลนครพระนครศรีอยุธยา 13000' ,
-    imageSrc:"https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/334230613_1252064175705534_1870723179088691695_n.jpg?stp=cp6_dst-jpg&_nc_cat=101&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeHDBWEZ0rIiYEUBG1RBtQCFmgfYP9QY0XuaB9g_1BjRe9_vf8qA68E3t_Ix1AwS2Q7pCutljkD2tsL6odS6gFPv&_nc_ohc=b1FPXQ28YQEAX9DGeDm&_nc_ht=scontent.fcnx3-1.fna&oh=00_AfBvfwe4C3rXIFeZF3biauAN7qRBw5Hr0t1NbvQZNgj5Eg&oe=650042BB",
+    imageSrc:"https://i.pinimg.com/750x/6f/60/c9/6f60c93afdd132138ffa097b8e146b69.jpg",
   },
   {
     id: 5,
