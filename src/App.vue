@@ -35,14 +35,14 @@ const coffeeShops = ref([
     name: 'The Soi',
     description:'แฮงเอาท์ชิลๆในบรรยากาศสบายๆ' ,
     address: '14/9 ตำบล หัวรอ อำเภอ พระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000 เทศบาลนครพระนครศรีอยุธยา 13000' ,
-    imageSrc:"https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/277579126_3285447608404983_1717424494833679722_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeH9c5ViULEnJe7Y7b54lq1Z0smo9T6__knSyaj1Pr_-SXimPFG59_Qz0DhVeZNLHwFRwOr3c-dE_-RSGSj1CaDg&_nc_ohc=Ok_HuWM4zhgAX-fxRwR&_nc_ht=scontent.fcnx3-1.fna&oh=00_AfArrZ_g0AVURGVJ_lNjtOVErvqIS_242M-LtKSLxx2M8Q&oe=6500E1C8",
+    imageSrc:"https://i.pinimg.com/750x/bd/f1/0d/bdf10d4d1c8ef85db7651426c376f07e.jpg",
   },
   {
     id: 6,
     name: 'Camping BAR Ayutthaya',
     description:'ร้านลับๆกลางทุ่งนามาๆ  โปรชั้นเพียบ Camping bar' ,
     address: 'เทศบาลนครพระนครศรีอยุธยา 13000' ,
-    imageSrc:"https://scontent.fcnx3-1.fna.fbcdn.net/v/t39.30808-6/366741231_304581012102718_2666544644703561045_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeEPBOj-4t_SlZ0KtdpxaX6yUlL0Uv8-H_RSUvRS_z4f9OnCkWE0bz_qs6r3C_vucc0HcOVJEexWVbBK-gln2ACB&_nc_ohc=SIegASjsk2kAX_UwtlF&_nc_ht=scontent.fcnx3-1.fna&oh=00_AfBfHAf5RkkpaJ2YOar9SjI5C3sFa9XYWzSUq11l4Mv0wg&oe=6501A664",
+    imageSrc:"https://i.pinimg.com/750x/ee/6b/c0/ee6bc0fb0c4da5ee0d9981a92e7549f3.jpg",
   },
 ]);
 
